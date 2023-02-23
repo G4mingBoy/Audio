@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Index</title>
+</head>
+<body>
+	<a href="/upload">Upload</a>
+	<br><br>
+	{%for x in result%}
+		<label>{{x}}: </label>
+		<audio controls>
+		  <source src="{{url_for('static', filename='Audios/'+x)}}" type="audio/mpeg">
+		</audio>
+		<br><br>
+	{%endfor%}
+</body>
+</html>
